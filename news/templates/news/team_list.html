@@ -2,8 +2,16 @@
     <head>
         <title>Volleyball</title>
     </head>
+    
+    
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        {% for team in teams %}
+    <div>
+        
+        <h1><a href="">{{team.teamName}}</a></h1>
+        
+    </div>
+        {% endfor %}
+        
     </body>
 </html>
