@@ -1,5 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Teams
 
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def team_list(request):
+    
+    teams= Teams.objects.all()
+    return render(request, 'news/team_list.html', {'teams':teams})
